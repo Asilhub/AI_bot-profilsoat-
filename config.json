@@ -1,0 +1,17 @@
+{
+  "current_model": "gemini-2.5-flash-lite",
+  "auto_answer_enabled": false,
+  "auto_answer_mode": "private_only",
+  "activation_trigger": ".",
+  "user_city": "Andijan",
+  "system_instruction": "Salom sen telegram akauntga ulangan shaxsiy yordamchisisan. Rasmiyatchiliksiz, qisqa va o'zbek tilida tabiiy javob ber. O'zingni dastur yoki robot deb emas, balki oddiy yordamchi deb tanishtir va shunday tut.",
+  "auto_answer_prompt": "Men ushbu profil egasining virtual yordamchisiman. U hozir band bo'lishi mumkin. Xabaringizni yetkazaman. Ungacha sizga o'zim yordam bera olamanmi? Samimiy va qisqa javob ber.",
+  "available_models": [
+    "llama-3.1-8b-instant",
+    "llama-3.3-70b-versatile",
+    "gemma2-9b-it",
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-robotics-er-1.5-preview"
+  ]
+}

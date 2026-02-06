@@ -1,0 +1,6 @@
+telethon
+python-dotenv
+google-generativeai
+groq
+requests
+pytz
