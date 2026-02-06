@@ -16,8 +16,8 @@ Loyihani kompyuteringizga o'rnatish uchun quyidagi qadamlarni bajaring:
 
 ### 1. Loyihani yuklab oling
 ```bash
-git clone https://github.com/vaxobovasilbek1/AIBOT.git
-cd AIBOT
+git clone https://github.com/Asilhub/AI_bot-profilsoat-.git
+cd AI_bot-profilsoat-
 ```
 
 ### 2. Kerakli kutubxonalarni o'rnating
