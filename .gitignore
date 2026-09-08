@@ -1,0 +1,25 @@
+# --- Maxfiy ma'lumotlar (hech qachon commit qilinmasin!) ---
+.env
+
+# --- Telegram sessiyalari (akkauntga to'liq kirish huquqi beradi) ---
+*.session
+*.session-journal
+
+# --- Shaxsiy sozlamalar (namunasi: config.example.json) ---
+config.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# --- Loglar ---
+*.log
+
+# --- Muhit ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
