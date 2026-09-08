@@ -4,7 +4,7 @@ Telegram akkauntingizga ulanadigan **userbot**: kelgan xabarlarga sun'iy intelle
 
 ## ✨ Imkoniyatlari
 
-- **🧠 AI** — Google Gemini va Groq (Llama 3, Gemma) modellari, panel orqali almashtiriladi
+- **🧠 AI** — Groq (GPT-OSS, Qwen3, Compound) va Google Gemini modellari, panel orqali almashtiriladi
 - **🗣 Aqlli avto-javob** — faqat shaxsiy chatlarda, cooldown va qora/oq ro'yxat bilan
 - **😴 Away-rejim** — siz yaqinda faol bo'lsangiz bot aralashmaydi
 - **🖼 Rasm va 🎤 ovoz** — rasmni tahlil qiladi (Gemini Vision), ovozli xabarni matnga o'giradi (Whisper)
@@ -12,6 +12,23 @@ Telegram akkauntingizga ulanadigan **userbot**: kelgan xabarlarga sun'iy intelle
 - **📍 Bio yangilanishi** — profil bio'sida joriy vaqt, sana va ob-havo (Open-Meteo, kalit talab qilmaydi)
 - **🛠 Admin panel** — alohida bot orqali: Model, Shahar, Avto-javob, Away, Xotira, Trigger, Promptlar, Qidirish, Kanallar, Ro'yxatlar, Status
 - **🔄 Barqarorlik** — tarmoq uzilsa avtomatik qayta ulanadi
+
+## 🧠 Modellar
+
+Standart model — `openai/gpt-oss-120b` (Groq). Admin paneldan almashtiriladi.
+
+| Model | Izoh |
+|---|---|
+| `openai/gpt-oss-120b` | standart, eng sifatli o'zbekcha |
+| `openai/gpt-oss-20b` | tezroq, yengilroq |
+| `qwen/qwen3.8-27b` | eng tez |
+| `groq/compound` | internetdan qidira oladi |
+| `gemini-2.5-flash` | rasm tahlili uchun ham ishlatiladi |
+| `gemini-2.5-flash-lite` | yengil Gemini |
+
+> **Eslatma:** ba'zi xostinglarning IP manzillari Google tomonidan bloklangan
+> bo'lishi mumkin — u holda Gemini `403` qaytaradi. Bunday paytda bot avtomatik
+> ravishda Groq modeliga o'tadi, faqat rasm tahlili ishlamaydi.
 
 ## 📁 Struktura
 

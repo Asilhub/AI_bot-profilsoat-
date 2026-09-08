@@ -1,5 +1,5 @@
 {
-  "current_model": "llama-3.1-8b-instant",
+  "current_model": "openai/gpt-oss-120b",
   "auto_answer_enabled": false,
   "auto_answer_mode": "private_only",
   "activation_trigger": ".",
@@ -7,9 +7,10 @@
   "system_instruction": "Sen Telegram akkauntga ulangan shaxsiy yordamchisan. Qisqa, tabiiy va o'zbek tilida javob ber.",
   "auto_answer_prompt": "Profil egasi hozir band. Xabarni yetkazaman. Qisqa va samimiy javob ber.",
   "available_models": [
-    "llama-3.1-8b-instant",
-    "llama-3.3-70b-versatile",
-    "gemma2-9b-it",
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b",
+    "qwen/qwen3.8-27b",
+    "groq/compound",
     "gemini-2.5-flash",
     "gemini-2.5-flash-lite"
   ],

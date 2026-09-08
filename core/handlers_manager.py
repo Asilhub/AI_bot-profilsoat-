@@ -11,12 +11,12 @@ from commands import search_listings
 
 # Modellar uchun chiroyli nomlar
 FRIENDLY = {
-    'llama-3.1-8b-instant': '⚡ Llama 3.1 8B',
-    'llama-3.3-70b-versatile': '🦙 Llama 3.3 70B',
-    'gemma2-9b-it': '💎 Gemma2 9B',
+    'openai/gpt-oss-120b': '🚀 GPT-OSS 120B',
+    'openai/gpt-oss-20b': '⚡ GPT-OSS 20B',
+    'qwen/qwen3.8-27b': '🐧 Qwen3.8 27B',
+    'groq/compound': '🔍 Compound (web)',
     'gemini-2.5-flash': '✨ Gemini 2.5 Flash',
     'gemini-2.5-flash-lite': '🪶 Gemini Flash Lite',
-    'gemini-robotics-er-1.5-preview': '🤖 Gemini Robotics',
 }
 
 CITIES = [
