@@ -68,15 +68,21 @@ async def search_listings(query, targets, scan=None):
         scan = config.get('search_scan_limit', 80)
     scan = max(10, min(int(scan), 1000))
     cap = min(max(scan, 120), 400)  # AI'ga yuboriladigan e'lonlar umumiy chegarasi
+    # Har kanalga teng ulush: aks holda birinchi kanal butun chegarani egallab,
+    # keyingilaridan deyarli hech narsa o'qilmaydi
+    per_channel = max(1, cap // max(1, len(targets)))
 
     collected = []
     for t in targets:
+        taken = 0
         try:
             async for msg in user_client.iter_messages(t, limit=scan):
-                if msg.text:
-                    snippet = msg.text[:220].replace('\n', ' ')
-                    collected.append((snippet, build_msg_link(msg)))
-                if len(collected) >= cap:
+                if not msg.text:
+                    continue
+                snippet = msg.text[:220].replace('\n', ' ')
+                collected.append((snippet, build_msg_link(msg)))
+                taken += 1
+                if taken >= per_channel:
                     break
         except Exception:
             continue
@@ -92,8 +98,18 @@ async def search_listings(query, targets, scan=None):
     )
     raw = await ask_ai_universal(f"So'rov: {query}\n\nE'lonlar:\n{listing}", custom_prompt=filter_prompt)
 
-    idxs = [int(x) for x in re.findall(r'\d+', raw or '')]
-    idxs = [i for i in idxs if 0 <= i < len(collected)][:8]
+    # Model "yoq" desa raqam qidirmaymiz — izohdagi raqamlar aralashib ketmasin
+    raw = raw or ''
+    if re.search(r"yo'?q", raw, re.IGNORECASE):
+        idxs = []
+    else:
+        idxs, seen = [], set()
+        for x in re.findall(r'\d+', raw):
+            i = int(x)
+            if 0 <= i < len(collected) and i not in seen:
+                seen.add(i)
+                idxs.append(i)
+        idxs = idxs[:8]
     if not idxs:
         return f"😕 '{query}' bo'yicha mos e'lon topilmadi."
 
